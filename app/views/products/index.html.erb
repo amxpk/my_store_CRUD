@@ -1,0 +1,25 @@
+<h1>Prodcut lsit</h1>
+<%= link_to "Add New Product", new_product_path  %>
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Product_category_id</th>
+    <th>Created_at</th>
+    <th>Updated_at</th>
+  </thead>
+  <% @producT.each do |f| %>
+  <tr>
+    <td><%= f.id %> </td>
+    <td><%= f.name %></td>
+    <td><%= f.quantity %></td>
+    <td><%= f.product_category_id %></td>
+    <td><%= f.created_at %></td>
+    <td><%= f.updated_at %></td>
+    <td><%= link_to "Edit", edit_product_path(f) %></td>
+    <td><%= link_to "Delete",f,method: :delete, data:{confrim:"Are you sure ?"} %></td>
+
+  </tr>
+    <% end %>
+</table>
