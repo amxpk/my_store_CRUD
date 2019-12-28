@@ -10,7 +10,7 @@
   <% @productC.each do |f| %>
   <tr>
     <td><%= f.id %> </td>
-    <td><%= link_to f.name, product_category_path(f) %>  </td> 
+    <td><%= link_to f.name, product_category_path(f) %>  </td>
     <td><%= f.created_at %></td>
     <td><%= f.updated_at %></td>
     <td><%= link_to "Edit", edit_product_category_path(f) %></td>
