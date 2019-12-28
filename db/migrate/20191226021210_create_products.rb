@@ -4,9 +4,8 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :quantity
       t.belongs_to :product_category
-      
-      t.datetime :created_at
-      t.datetime :updated_at
+
+    
       t.timestamps
     end
   end
